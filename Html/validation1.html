@@ -1,0 +1,42 @@
+ <html>
+ <head>
+ <script>
+function validateform(){  
+{
+console.log("validate Form");
+let re=/\d/;
+let nameValue="document.getElementById('submitName').value;
+console.log(nameValue,'nameValue');
+if(nameValue!==" && nameValue!== null && nameValue.match(re))
+{
+document.getElementById("validation").style.dislay='none';
+validatePassword()&&submitData()
+}
+else
+{
+document.getElementById("validation").style.display="block"
+};
+function onFocusEvent()
+{
+
+document.getElementById("validation").style.display='none';
+document.getElementById("validation").value=";
+}
+function submitData(name)
+{
+alert('form submit')
+}
+}
+
+</script>
+ </head>
+ <body>
+ <form>
+     
+        <label>UserName:</label>
+        <input type="text"  id="submitName" name="name" onfocus="onFocusEvent()"/>
+		<br>
+ <div id="validation">Name is not valid</div>
+ </form>
+ </body>
+ </html>

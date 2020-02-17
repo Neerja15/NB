@@ -1,0 +1,41 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var minAge = 18;
+        function _calcAge() {
+            var date = new Date(document.getElementById("date").value);
+            var today = new Date();
+
+            var timeDiff = Math.abs(today.getTime() - date.getTime());
+            var age1 = Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365;
+            return age1;
+        }
+        //Compares calculated age with minimum age and acts according to rules//
+        function _setAge() {
+
+            var age = _calcAge();
+            alert("my age is " + age);
+		
+            if (age < minAge) {
+                alert("You are not allowed into the site. The minimum age is 18!");
+            } else
+
+                alert("Welcome to my Site");
+            window.open(main.htm, _self);
+
+        }
+
+
+    </script>
+    <form>
+    Date Of Birth:
+    <input type="date" name="date of birth" id="date" />
+    <input type="submit" name="submit" id="submit" onclick="_setAge();" />
+    </form>
+</body>
+</html>

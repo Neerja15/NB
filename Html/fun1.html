@@ -1,0 +1,24 @@
+<html>
+<head> 
+</head> 
+<button onclick="myFunction()">Click</button>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+var x;
+var r = confirm("press a button");
+if(r==true)
+	{
+	x=" you pressed ok!";
+	}
+else
+{
+ x="you pressed cancel";
+}
+document.getElementById("demo").innerHTML=x;
+
+}
+</script>
+</body>
+</html>

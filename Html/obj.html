@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+<button onclick="funct()">Click.. </button>
+<p id="5566"></p>
+<script>
+function funct()
+{
+ var person={
+	firstName:"John",
+	lastName:"Doe",
+	id:5566,
+	fullName: function() {
+		return this.firstName + " " + this.lastName;
+	}
+	
+}
+document.getElementById("5566").innerHTML =person.firstName + " " + person.lastName + " ";
+document.getElementById("5566").innerHTML = person.fullName();
+}
+};
+</script>
+</body>
+
+</html>

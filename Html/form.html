@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Form</title>
+<link rel="icon" href="C:\Users\admin\Documents\untitled.png">
+<metacharset="UTF-8">
+</head>
+<body>
+<form method="post">
+Fname<br>
+<input type="text" name="name"><br><br>
+
+Lname<br>
+<input type="text" name="lname"><br><br>
+<input type="radio" name="gender" value="male" checked>Male<br>
+<input type="radio" name="gender" value="female" checked>Female<br>
+<input type="submit" value="Insert">
+</form>
+<h1>Second form</h1>
+<form>
+<fieldset>
+	<legend> Personal Information</legend>
+Fname<br>
+<input type="text" name="name"><br><br>
+
+Lname<br>
+<input type="text" name="lname"><br><br>
+<input type="radio" name="gender" value="male" checked>Male<br>
+<input type="radio" name="gender" value="female" checked>Female<br>
+
+Hobbies<br>
+<input type="checkbox" name="hobby" value="cric">Cricket
+<input type="checkbox" name="hobby" value="sw">Swimming
+<input type="checkbox" name="hobby" value="run">Running<br>
+
+Password<br>
+<input type="password" name="pwd"><br>
+
+Select your car:
+<select name="cars" size="2" multiple>
+
+	<option value="c1"> Car1 </option>
+	<option value="c2"> Car2 </option>
+	<option value="c3"> Car3 </option>
+	<option value="c4"> Car4 </option>
+</select><br><br>
+<textarea name ="adr" rows="5" cols="20"></textarea><br>
+Select color
+<input type="color"><br>
+Birth date
+<input type="date"><br>
+Enter a date before 1980-01-01
+<input type="date" name="bday" max="1979-12-31"><br>
+
+Enter a date after 2000-01-01
+<input type="date" name="bday" min="2000-01-02"><br>
+
+Quantity:
+<input type="number" name="points" min="0" max="100" step="10" value="30"><br>
+
+Email: <input type="email" required multiple><br>
+<label> Your car name: </label>
+
+	 <input list="cars" id="carsInput">
+	 <datalist id= "cars">
+	  <option value="BMW"/>
+	  <option value="Bentley"/>
+	  <option value="Mercedes"/>
+	  <option value="Audi"/>
+	  <option value="Volkswagon"/>
+	 </datalist><br><br><br>
+	 
+<img src="untitled.png" width="200px", height="100px">
+<br><br>
+<input type="submit" value="Insert">
+<input type="reset" value="Reset">
+<button type="button"> click me </button>
+</fieldset>
+</form>
+</body>
+</html>

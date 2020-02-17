@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      .w3docs 
+	  {
+      margin-left: 70px;
+      font-weight: bold ;
+      text-align: left;
+      font-family:sans-serif,bold, Arial, Helvetica;
+      font-size:14px;
+      }
+      .buttons{
+      display:flex;
+      align-items: center;
+      width:100%;
+      }
+   div input{
+      margin-right:10px;
+      }
+      form {
+      margin: 0 auto;
+      width: 600px;
+      }
+      form input{
+      padding: 10px;
+      }
+      form select{
+      background-color: #ffffff;
+      padding:5px;
+      }
+      form textarea{
+      padding:10px;
+      margin-bottom:5px;
+      }
+      form label{
+      display:block;
+      width:100%;
+      margin-bottom:5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center"> Registration Form </h2>
+    <form name="RegForm" action="/submit.php" onsubmit="return W3docs()" method="post" class="w3docs">
+      <div>
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" size="30" name="Name">
+      </div>
+      <br>
+      <div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" size="60" name="Address"> 
+      </div>
+      <br>
+      <div>
+        <label for="E-mail"l>E-mail Address:</label>
+        <input type="email" id="E-mail" size="60" name="Email">
+      </div>
+      <br>
+      <div>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" size="60" name="Password">
+      </div>
+      <br>
+      <div>
+        <label for="Telephone">Telephone: </label>
+        <input type="number" id="Telephone" size="60" name="Telephone"> 
+      </div>
+      <br>
+      <div>
+        <label>Gender</label>
+		<br>
+        <input type="radio" value="Male" name="Male">Male
+          <input type="radio" value="Female" name="Female">Female
+      </div>
+      <br>
+      
+      <div class="buttons">
+        <input type="submit" value="Send" name="Submit">
+		<button onclick="window.location.href='page5.html'">Continue</button
+        <input type="reset" value="Reset" name="Reset">
+      </div>
+    </form>
+    <script> 
+      function W3docs()                                    
+      { 
+          var name = document.forms["RegForm"]["Name"];               
+          var email = document.forms["RegForm"]["Email"];    
+          var phone = document.forms["RegForm"]["Telephone"];  
+          var what =  document.forms["RegForm"]["Subject"];  
+          var password = document.forms["RegForm"]["Password"];  
+          var address = document.forms["RegForm"]["Address"];  
+          var comment = document.forms["RegForm"]["Comment"];  
+
+          if (name.value == "")                                  
+          { 
+              alert("Please enter your name."); 
+              name.focus(); 
+              return false; 
+          }    
+          if (address.value == "")                               
+          { 
+              alert("Please enter your address."); 
+              address.focus(); 
+              return false; 
+          }        
+          if (email.value == "")                                   
+          { 
+              alert("Please enter a valid e-mail address."); 
+              email.focus(); 
+              return false; 
+          }    
+          if (email.value.indexOf("@", 0) < 0)                 
+          { 
+             alert("Please enter a valid e-mail address."); 
+              email.focus(); 
+              return false; 
+          }    
+          if (email.value.indexOf(".", 0) < 0)                 
+          { 
+              alert("Please enter a valid e-mail address."); 
+              email.focus(); 
+              return false; 
+          }    
+          if (phone.value == "")                           
+          { 
+              alert("Please enter your telephone number."); 
+              phone.focus(); 
+              return false; 
+          }    
+          if (password.value == "")                        
+          { 
+              alert("Please enter your password"); 
+              password.focus(); 
+              return false; 
+          }    
+          if (what.selectedIndex < 1)                  
+          { 
+              alert("Please enter your course."); 
+              what.focus(); 
+              return false; 
+          } 
+          if (comment.value == "")                  
+          { 
+             alert("Please enter a comment."); 
+             comment.focus(); 
+             return false; 
+          } 
+          return true; 
+      }
+    </script> 
+  </body>
+</html>

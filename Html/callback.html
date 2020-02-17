@@ -1,0 +1,35 @@
+<html>
+<body>
+
+
+
+<script>
+function myfun3(){
+var numbers = [45, 4, 9, 16, 25];
+var numbers1 = numbers.map(myFunction);
+
+var numbers2 = numbers.filter(myfilterfun);
+var numbers3 = numbers.reduce(maketotal);
+var numbers4 = numbers.every(myfilterfun);
+var numbers5 = numbers.find(myfilterfun);
+document.write("Result: "+numbers1+"<br>");
+document.write("Result: "+numbers2 +"<br>");
+document.write("Result: "+numbers3 +"<br>");
+document.write("Result: "+numbers4 +"<br>");
+document.write("Result: "+numbers5 +"<br>");
+document.write(Math.floor(Math.random() *100));
+}
+function myFunction(value) {
+ return value*2;
+}
+function myfilterfun(value){
+return value>18;
+}
+function maketotal(total,value){
+return total+ value;
+} 
+
+</script>
+<input type="button" name="insert" onclick="myfun3()">
+</body>
+</html>

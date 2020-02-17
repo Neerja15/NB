@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top:30px;
+margin-left:20px;
+margin-right:40px;
+width:100%;
+}
+
+
+.navbar {
+  width: 100%;
+  background-color: gray;
+  overflow: auto;
+<!--}
+
+.navbar a {
+  float: left;
+ 
+  color: white;-->
+  text-decoration: none;
+  padding: 12px;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: gray;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+<!--@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }-->
+  
+}
+table
+{
+margin-top:30px;
+margin-left:10px;
+margin-right:10px;
+width:100%;
+text-align: left;
+  padding: 25px;
+
+
+}
+th,td{
+ border-bottom: 1px solid #ddd;
+ padding:10px;
+ 
+ }
+.container
+{
+
+margin-left:10px;
+margin-right:10px;
+width:1000px;
+ right: 30px;
+  left:5px;
+}
+.col-sm-10
+{
+width:100%;
+ 
+
+}
+img
+{
+height:30px;
+margin-top:8px;
+margin-left:5px;
+float:left;
+}
+
+ 
+</style>
+
+
+  </head>
+<body>
+<script>
+function myFunction(){  
+
+var x,text;
+x=document.getElementById('b4').value;
+
+if(x==""|| ((x>='a' && x<='z')||(x >='A' && x<= 'Z')))
+{
+text= "input not valid";
+}
+else
+{
+text="Input Ok"
+}
+document.getElementById("demo1").innerHTML= text;
+}
+
+function myFunction2(){  
+
+var x,text;
+x=document.getElementById('b3').value;
+
+if(x==""|| ((x>='a' && x<='z')||(x >='A' && x<= 'Z')))
+{
+text= "input not valid";
+}
+else
+{
+text="Input Ok"
+}
+document.getElementById("demo2").innerHTML= text;
+}
+function tot()
+{
+var a,b,c;
+ var a = document.forms["myform"]["b3"].value;
+  var b = document.forms["myform"]["b4"].value;
+  var c = a * b;
+  document.getElementById("demo").innerHTML = c;
+}
+
+        var minAge = 18;
+        function _calcAge() {
+            var date = new Date(document.getElementById("date").value);
+            var today = new Date();
+
+            var timeDiff = Math.abs(today.getTime() - date.getTime());
+            var age1 = Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365;
+            return age1;
+        }
+        //Compares calculated age with minimum age and acts according to rules//
+        function _setAge() {
+
+            var age = _calcAge();
+            alert("my age is " + age);
+		
+            if (age < minAge) {
+                alert("You are not allowed into the site. The minimum age is 18!");
+            } else
+
+                alert("Welcome to my Site");
+            window.open(main.htm, _self);
+
+        }
+
+		function nmCheck()
+		{
+			var name =	document.getElementById("nm").value;
+			if(nm==null||nm=="")
+			{
+				alert("name empty");
+				return false;
+			}
+		}
+</script>
+<p id="demo2"></p>
+<p id="demo1"></p>
+
+<div class="navbar">
+<img src="C:\Users\admin\Documents\flip.png" >
+
+  <a href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="#"><i class="fa fa-fw fa-user"></i> About us</a>
+</div>
+
+	<div class="container">
+		<div class="row">
+			
+			 <br>
+			 <form class="form-horizontal" name="myform" method="post" action="#"  >
+				<div class="col-sm-12"><div class="form-group has-success has-feedback">					
+				<div class="col-sm-10">
+						<input type="text" name="name" class="form-control" placeholder="Product Name" id="nm" onblur="nmCheck()" required>
+				
+					<!--<label for="un" class="control-label col-sm-2">Product Name </label>
+						<span class="help-block">Enter only characters</span>-->
+					</div>
+				</div></div>
+				
+			<div class="col-sm-12">
+			 <br>
+			 
+				<div class="form-group has-success has-feedback">					
+				<div class="col-sm-10">
+						<input type="text" class="form-control" id="b3" onblur="myFunction2()" placeholder="Quantity"  >
+				
+					<!--<label for="un" class="control-label col-sm-2">Product Name </label>
+						<span class="help-block">Enter only characters</span>-->
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12">
+			 <br>
+			 
+				<div class="form-group has-success has-feedback">
+				
+					<div class="col-sm-10">
+						<div class="input-group">
+						<span class="input-group-addon">$</span>
+						<input type="text" class="form-control" id="b4" onblur="myFunction()" placeholder="Price" > 
+				
+					</div>
+				</div>	</div></div>	
+				<br>
+									<br>
+				<div class="col-sm-12">
+				<br>
+				<div class="form-group has-success has-feedback">					
+				<div class="col-sm-10">
+				Date Of Birth:
+    <input type="date" name="date of birth" id="date" />
+    <input type="submit" name="submit" id="submit" onclick="_setAge();" />
+						<br></div>
+				</div>
+				</div>	<br>
+				<div class="col-sm-12">
+				<br>
+				<div class="form-group has-success has-feedback">					
+				<div class="col-sm-10">
+						<!--<h4 style="display:inline;" > Total=</h4><h4 id="demo" style="display:inline;"></h4>-->
+						<p id="demo"><input type="text" class="form-control"   placeholder="Total" > </p>
+						<br></div>
+				</div>
+				</div>
+				
+				
+
+					<div>
+					
+						<div class="col-sm-12">
+				<br>
+				 <input style="margin-top:5px;" type="button" onclick="tot()" value="Total">
+					<!--<label for="un" class="control-label col-sm-2">Product Name </label>
+						<span class="help-block">Enter only characters</span>-->
+					
+			<input type="button" value="Insert"   class= "btn btn-sm btn-primary">
+ <button type="reset"  class= "btn btn-sm btn-warning">Delete All</button>
+ </div></div>
+				<div class="col-sm-12">
+			 <br>
+			
+				<div class="form-group has-success has-feedback">					
+				<div class="col-sm-10">
+				<div class="input-group"><span class="input-group-addon"><button type="submit"><i class="fa fa-search"></i></button></span>
+						<input type="text" class="form-control" id="un" placeholder="Search..">
+						
+					<!--<label for="un" class="control-label col-sm-2">Product Name </label>
+						<span class="help-block">Enter only characters</span>-->
+					</div>
+					
+					
+					</form>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+				</div>
+				</div>
+ <br>
+
+ <div class="col-sm-10">
+  <table>
+    <tr>
+      <th>Product Name</th>
+      <th>Quantity Name</th>
+      <th colspan="2">Action</th>
+    </tr>
+	
+ 
+      <td>Specs</td>
+      <td>20</td>
+      <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+	    <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+    </tr>
+	
+    <tr>
+      <td>Pad</td>
+      <td>20</td>
+      <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+	    <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>20</td>
+     <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+	    <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+    </tr>
+	  <tr>
+      <td>Mouse</td>
+      <td>15</td>
+      <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+	    <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+    </tr>
+	  <tr>
+      <td>Table</td>
+      <td>10</td>
+     <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+	    <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+    </tr>
+	
+  </table>
+</div>
+
+			
+		
+
+</body>
+</html>

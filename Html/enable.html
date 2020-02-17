@@ -1,0 +1,23 @@
+<html>
+<body>
+<form> Buttons:
+<input type="button" id="firstbtn" value="OK" style = "color:white;background-color:black; font-style: italic">
+<input type="button" id="secondbtn" value="OK" style = "color:white;background-color:black ; font-style: italic">
+</form>
+<p> Click the button below to disable the first button above</p>
+
+<button onclick="disableElement()" style = "color:white;background-color:blue"> Disable button</button>
+<button onclick="enableElement()" style = "color:white;background-color:blue"> Enable button</button>
+<script>
+function disableElement()
+{
+document.getElementById("firstbtn").disabled=true;
+}
+
+function enableElement()
+{
+document.getElementById("firstbtn").disabled=false;
+}
+</script>
+</body>
+</html>
