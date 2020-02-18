@@ -64,6 +64,7 @@ double calculate()
 	    da=(0.30*basic_pay);
 		hra=(12.5*basic_pay);
 		pf=(0.12*basic_pay);
+		inctax=(0.19*basic_pay);
 		gross_pay=basic_pay+da+hra;
 		netpay=gross_pay-pf;
 		return netpay;
