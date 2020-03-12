@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE employees SYSTEM "employees.dtd">
+
+
+<employees>
+	<employee >
+		<name>Harshita</name>
+		<salary>24000</salary>
+	</employee>
+
+	<employee>
+		<name>Pulkit</name>
+		<salary>45000</salary>
+	</employee>
+</employees>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title id="p1">DemoTitle</title>
+</head>
+<body>
+
+<button onclick="changeTitle2()">Try it document.getElement</button>
+
+<button onclick="myFunction()">Try it title tag</button>
+
+<button onclick="changeTitle()">Try it querySelector</button>
+
+
+
+<script>
+function myFunction() {
+  document.title = "New Title";
+  
+}
+function changeTitle()
+{
+	document.querySelector('title').textContent="Page Title Changed";
+	}
+function changeTitle2()
+{
+	document.getElementById("p1").innerHTML="Title Changed";
+	}
+</script>
+
+</body>
+</html>
